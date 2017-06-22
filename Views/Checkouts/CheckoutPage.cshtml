@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "CheckoutPage";
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<h2>CheckoutPage</h2>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+<script src="https://js.braintreegateway.com/web/dropin/1.3.1/js/dropin.min.js"></script>
+
+
+<script type="text/javascript" src="/App_Themes/javascript/jquery.easing-1.3.pack.js"></script>
+<script type="text/javascript" src="/App_Themes/javascript/jquery.mousewheel-3.0.4.pack.js"></script>
+
+<script type="text/javascript" src="/App_Themes/javascript/jquery.fancybox-1.3.4.pack.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/App_Themes/css/jquery.fancybox-1.3.4.css" media="screen" />
+
+<a id="example2" href="/Checkouts/New">Take my money</a>
+
+<!--
+    
+remove this from app.css
+    *, *:before, *:after {
+  box-sizing: inherit; }
+    -->
+<script>
+    jQuery(document).ready(function () {
+        $("a#example2").fancybox({
+            ajax: {
+                type: "GET"
+            },
+            'overlayShow': true,
+            'transitionIn': 'elastic',
+            'transitionOut': 'elastic',
+            'autoScale': true,
+            'easingIn': 'easeOutBack',
+            'easingOut': 'easeInBack'
+        });
+    });
+</script>
+
+</html>
